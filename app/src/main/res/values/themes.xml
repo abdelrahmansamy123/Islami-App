@@ -34,4 +34,7 @@
     <style name="back_icon" parent="Theme.Islami">
         <item name="android:tint">@color/black</item>
     </style>
+    <style name="sebha_phase" parent="Theme.Islami">
+        <item name="android:textColor">@color/white</item>
+    </style>
 </resources>

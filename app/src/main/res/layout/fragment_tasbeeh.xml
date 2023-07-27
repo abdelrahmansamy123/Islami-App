@@ -67,12 +67,14 @@
         android:textSize="25sp"
         android:textStyle="bold"
         android:gravity="center"
+        android:background="@drawable/sebha_count"
         app:layout_constraintTop_toBottomOf="@id/counter_txr_rv"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         />
 
     <TextView
+        style="@style/sebha_phase"
         android:id="@+id/phase"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -80,8 +82,9 @@
         android:text="سبحان الله"
         android:textSize="25sp"
         android:textStyle="bold"
-        android:textColor="@color/black"
+        android:textColor="@color/white"
         android:gravity="center"
+        android:background="@drawable/sebha_phase"
         app:layout_constraintTop_toBottomOf="@id/counter_tv"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"/>

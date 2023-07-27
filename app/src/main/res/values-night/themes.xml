@@ -33,6 +33,9 @@
     <style name="back_icon" parent="Theme.Islami">
         <item name="android:tint">@color/white</item>
     </style>
+    <style name="sebha_phase" parent="Theme.Islami">
+        <item name="android:textColor">@color/black</item>
+    </style>
 <!--    <style name="botton_navigation_style" parent="Theme.Islami">-->
 <!--        <item name="backgroundTint"></item>-->
 <!--    </style>-->
