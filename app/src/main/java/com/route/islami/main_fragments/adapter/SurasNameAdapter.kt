@@ -10,13 +10,13 @@ import com.route.islami.R
 import com.route.islami.callbacks.OnSuraClickListener
 
 
-class SurasNameAdapter(var suras : List<String>) :
-    RecyclerView.Adapter<SurasNameAdapter.surasNamesNiewHolder>(){
+class SurasNameAdapter(var suras: List<String>) :
+    RecyclerView.Adapter<SurasNameAdapter.surasNamesNiewHolder>() {
 
-    var onSuraClickListener : OnSuraClickListener? = null
+    var onSuraClickListener: OnSuraClickListener? = null
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): surasNamesNiewHolder {
         val inflater = LayoutInflater.from(parent.context)
-        val view = inflater.inflate(R.layout.quran_list_item,parent,false)
+        val view = inflater.inflate(R.layout.quran_list_item, parent, false)
         return surasNamesNiewHolder(view)
     }
 
@@ -24,16 +24,17 @@ class SurasNameAdapter(var suras : List<String>) :
         holder.suraName.text = suras.get(position)
 
         holder.itemView.setOnClickListener {
-            onSuraClickListener?.onSuraClick(position,suras.get(position))
+            onSuraClickListener?.onSuraClick(position, suras.get(position))
         }
     }
 
     override fun getItemCount(): Int {
         return suras.size
     }
-    class surasNamesNiewHolder (val itemView : View ) : ViewHolder(itemView){
 
-        var suraName : TextView
+    class surasNamesNiewHolder(val itemView: View) : ViewHolder(itemView) {
+
+        var suraName: TextView
 
 
         init {
@@ -41,8 +42,6 @@ class SurasNameAdapter(var suras : List<String>) :
 
         }
     }
-
-
 
 
 }

@@ -26,7 +26,7 @@ class QuranFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        return inflater.inflate(R.layout.fragment_quran,container,false)
+        return inflater.inflate(R.layout.fragment_quran, container, false)
     }
 
 
@@ -40,28 +40,29 @@ class QuranFragment : Fragment() {
         quranAdapter = SurasNameAdapter(ArSuras)
         quranRecyclerView.adapter = quranAdapter
         quranRecyclerView.layoutManager = LinearLayoutManager(context)
-        quranAdapter.onSuraClickListener = object : OnSuraClickListener{
-            override fun onSuraClick(position: Int, suraName : String) {
+        quranAdapter.onSuraClickListener = object : OnSuraClickListener {
+            override fun onSuraClick(position: Int, suraName: String) {
                 val intent1 = Intent(requireActivity(), SuraDetailsActivity::class.java)
-                intent1.putExtra(Constants.EXTRA_SURA_POSITION,position)
-                intent1.putExtra(Constants.EXTRA_SURA_NAME_KEY,suraName)
+                intent1.putExtra(Constants.EXTRA_SURA_POSITION, position)
+                intent1.putExtra(Constants.EXTRA_SURA_NAME_KEY, suraName)
                 startActivity(intent1)
             }
 
         }
 
     }
+
     fun switchModeLogic() {
-        if (AppCompatDelegate.getDefaultNightMode()==AppCompatDelegate.MODE_NIGHT_YES){
+        if (AppCompatDelegate.getDefaultNightMode() == AppCompatDelegate.MODE_NIGHT_YES) {
             switchModeButton.text = "Light"
-        }else{
+        } else {
             switchModeButton.text = "Dark"
         }
         switchModeButton.setOnClickListener {
-            if (AppCompatDelegate.getDefaultNightMode()==AppCompatDelegate.MODE_NIGHT_YES){
+            if (AppCompatDelegate.getDefaultNightMode() == AppCompatDelegate.MODE_NIGHT_YES) {
                 AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
                 switchModeButton.text = "Dark"
-            }else{
+            } else {
                 AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
                 switchModeButton.text = "Light"
             }

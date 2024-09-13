@@ -5,10 +5,9 @@
     android:layout_height="match_parent"
     android:background="@drawable/islami_bg">
 
-
     <TextView
-        style="@style/toolbartitle"
         android:id="@+id/islami_text"
+        style="@style/toolbartitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="16dp"
@@ -17,13 +16,14 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
     <Button
         android:id="@+id/switch_mode"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@id/islami_text"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@id/islami_text"
-        app:layout_constraintBottom_toBottomOf="@id/islami_text"
 
         />
 
@@ -47,15 +47,15 @@
         app:layout_constraintTop_toBottomOf="@id/quran_image" />
 
     <TextView
-        style="@style/sura_text"
         android:id="@+id/suras_name"
+        style="@style/sura_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="اسم السورة"
         android:textSize="28sp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/top_border"
-        app:layout_constraintEnd_toEndOf="parent"/>
+        app:layout_constraintTop_toBottomOf="@id/top_border" />
 
     <View
         android:id="@+id/bottom_border"
@@ -64,9 +64,6 @@
         android:layout_marginHorizontal="8dp"
         android:background="@color/colorGoldVaraint"
         app:layout_constraintTop_toBottomOf="@id/suras_name" />
-
-
-
 
 
     <androidx.recyclerview.widget.RecyclerView

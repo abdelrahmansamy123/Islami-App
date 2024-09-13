@@ -9,13 +9,12 @@ import com.route.islami.Hadeth
 import com.route.islami.R
 
 class AhadethFragment : Fragment() {
-
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        return inflater.inflate(R.layout.fragment_ahadeth,container,false)
+        return inflater.inflate(R.layout.fragment_ahadeth, container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -23,19 +22,20 @@ class AhadethFragment : Fragment() {
         readHadethFile()
 
     }
+
     val allAhadeth = mutableListOf<Hadeth>()
-    fun readHadethFile(){
+    fun readHadethFile() {
         val fileContent = activity?.assets?.open("ahadeth.txt")?.bufferedReader().use {
             it?.readText()
         }
-        if(fileContent==null)return;
-        val ahadethContents =fileContent.trim().split("#")
-        ahadethContents.forEach { singleHadethContent->
-           // val indexOfFirstLine = singleHadethContent.indexOf('\n')
-           // val title = singleHadethContent.substring(0,indexOfFirstLine)
+        if (fileContent == null) return;
+        val ahadethContents = fileContent.trim().split("#")
+        ahadethContents.forEach { singleHadethContent ->
+            // val indexOfFirstLine = singleHadethContent.indexOf('\n')
+            // val title = singleHadethContent.substring(0,indexOfFirstLine)
             val title = singleHadethContent.trim().substringBefore('\n')
             val content = singleHadethContent.trim().substringAfter('\n')
-            val hadeth = Hadeth(title,content)
+            val hadeth = Hadeth(title, content)
             allAhadeth.add(hadeth)
 
         }

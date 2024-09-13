@@ -1,10 +1,10 @@
 package com.route.islami.data.model
 
 data class SuraDataItem(
-    val name : String?=null ,
-    val count : Int?= null ,
+    val name: String? = null,
+    val count: Int? = null,
 
-)
+    )
 
 var ArSuras = listOf(
     "الفاتحه",
